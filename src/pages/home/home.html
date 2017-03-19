@@ -9,7 +9,7 @@
   <ion-card>
     <h1 text-center padding>{{percentage}}% <br> of Goal</h1>
   </ion-card>
-  <div padding><progress value={{currentTotal}} max="100" color="secondary"></progress></div>
+  <div padding><progress value={{percentage}} max="100" color="secondary"></progress></div>
 
   <button (click)="notify()" ion-button round>Notify Your Team!</button>
 

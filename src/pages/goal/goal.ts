@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import {NavController, AlertController} from 'ionic-angular';
+import {Tracker} from "../../app/Tracker";
 
 
 @Component({
@@ -9,9 +10,9 @@ import {NavController, AlertController} from 'ionic-angular';
 })
 
 export class GoalPage {
-	private goal: number = 0;
+	private goal: number;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private tracker: Tracker) {
   }
 
   public addPopup() {
@@ -24,6 +25,7 @@ export class GoalPage {
           text: 'Save',
           handler: data => {
             this.goal = Number(data.Amount);
+            this.tracker.setGoal(Number(data.Amount));
           }
         }
       ]

@@ -19,12 +19,17 @@ export class Tracker {
   }
 
   public setGoal(goal: number): void {
+    this.currentGoal = goal;
     this.goalUpdated.emit(goal);
     this.percentageUpdated.emit(this.getPercentage());
   }
 
   public getPercentage(): number {
-    return this.currentTotal/ this.currentGoal;
+    if (this.currentGoal) {
+      return (this.currentTotal/ this.currentGoal) * 100;
+    } else {
+      return 0;
+    }
   }
 
 }
