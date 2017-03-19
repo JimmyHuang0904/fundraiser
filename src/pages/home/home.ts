@@ -19,17 +19,19 @@ export class HomePage {
   ngOnInit() {
     this.tracker.totalUpdated.subscribe(
       (total) => {
-        this.currentTotal= this.tracker.getTotal();
+        this.currentTotal= total;
+      }
+    );
+    this.tracker.goalUpdated.subscribe(
+      (goal) => {
+        this.goal = goal;
+      }
+    );
+    this.tracker.percentageUpdated.subscribe(
+      (percent) => {
+        this.percentage = percent;
       }
     );
   }
-
-  private add() {
-    this.currentTotal += 10;
-  }
-
-  private subtract() {
-    this.currentTotal -= 10;
-  	}
 
 }
