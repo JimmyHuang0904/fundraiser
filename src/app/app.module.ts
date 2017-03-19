@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { TransactionPage } from '../pages/about/transactions';
-import { ContactPage } from '../pages/contact/contact';
+import { GoalPage } from '../pages/goal/goal';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import {Tracker} from './Tracker';
@@ -11,7 +11,7 @@ import {Tracker} from './Tracker';
   declarations: [
     MyApp,
     TransactionPage,
-    ContactPage,
+    GoalPage,
     HomePage,
     TabsPage
   ],
@@ -22,7 +22,7 @@ import {Tracker} from './Tracker';
   entryComponents: [
     MyApp,
     TransactionPage,
-    ContactPage,
+    GoalPage,
     HomePage,
     TabsPage
   ],

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Goal
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <p color="secondary">Modify your Goal</p>
+    <button (click)="addPopup()" ion-button outline item-right icon-left color="secondary"> + </button>
+  </ion-item>
+  <ion-card text-center padding>
+    <ion-card-header>Goal</ion-card-header>
+    <h1>${{goal}}</h1>
+  </ion-card>
+</ion-content>
