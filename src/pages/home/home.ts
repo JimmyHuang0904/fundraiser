@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Tracker } from '../../app/Tracker';
+import {SocialSharing} from "ionic-native";
 
 @Component({
   selector: 'page-home',
@@ -32,6 +33,12 @@ export class HomePage {
         this.percentage = percent;
       }
     );
+  }
+
+  public notify() {
+    let message = "Your team just got closer to reaching your goal! You have raised $" + this.currentTotal + "and are " + this.percentage + "% of the way there!";
+    let number = "6043798821";
+    SocialSharing.shareViaSMS(message, number);
   }
 
 }
