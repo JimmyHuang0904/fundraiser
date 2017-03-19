@@ -15,4 +15,14 @@
     <ion-card-header>Goal</ion-card-header>
     <h1>${{goal}}</h1>
   </ion-card>
+
+
+  <ion-list>
+    <ion-item *ngFor='let goal of goals'>
+      ${{goal.amount}}
+      {{      goal.name}}
+      <p text-right color="dark">{{goal.date.toLocaleDateString()}}</p>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
