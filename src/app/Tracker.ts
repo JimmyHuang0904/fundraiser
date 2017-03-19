@@ -1,4 +1,8 @@
-export class Traker {
+import {Injectable} from '@angular/core';
+
+@Injectable()
+
+export class Tracker {
   currentTotal: number;
 
   constructor() {}

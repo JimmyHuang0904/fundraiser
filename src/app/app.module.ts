@@ -5,7 +5,7 @@ import { TransactionPage } from '../pages/about/transactions';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import {Traker} from './Traker';
+import {Tracker} from './Tracker';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {Traker} from './Traker';
   imports: [
     IonicModule.forRoot(MyApp)
   ],
-  bootstrap: [IonicApp, [Traker]],
+  bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     TransactionPage,
@@ -26,7 +26,7 @@ import {Traker} from './Traker';
     HomePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Tracker]
 })
 export class AppModule {
 

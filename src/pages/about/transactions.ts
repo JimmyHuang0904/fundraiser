@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import {NavController, AlertController} from 'ionic-angular';
-import {Traker} from '../../app/Traker';
+import {Tracker} from '../../app/Tracker';
 
 export interface Transaction {
   amount: number;
@@ -17,7 +17,7 @@ export class TransactionPage {
   private transactions: Transaction[] = [];
   private total: number = 0;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public traker: Traker) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public traker: Tracker) {
 
   }
 
