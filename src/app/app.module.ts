@@ -5,6 +5,7 @@ import { TransactionPage } from '../pages/about/transactions';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import {Traker} from './Traker';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   imports: [
     IonicModule.forRoot(MyApp)
   ],
-  bootstrap: [IonicApp],
+  bootstrap: [IonicApp, [Traker]],
   entryComponents: [
     MyApp,
     TransactionPage,

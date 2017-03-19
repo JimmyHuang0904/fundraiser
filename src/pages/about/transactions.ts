@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import {NavController, AlertController} from 'ionic-angular';
+import {Traker} from '../../app/Traker';
 
 export interface Transaction {
   amount: number;
@@ -16,7 +17,7 @@ export class TransactionPage {
   private transactions: Transaction[] = [];
   private total: number = 0;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public traker: Traker) {
 
   }
 
@@ -37,13 +38,10 @@ export class TransactionPage {
     prompt.present();
   }
 
-  public getTotal() {
-    return this.total;
-  }
-
   private add(amount: number) {
     this.transactions.push({amount: amount, date: new Date()});
     this.total += amount;
+    this.traker.setTotal(this.total);
   }
 
 }
