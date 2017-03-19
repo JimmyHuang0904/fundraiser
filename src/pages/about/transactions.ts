@@ -17,7 +17,7 @@ export class TransactionPage {
   private transactions: Transaction[] = [];
   private total: number = 0;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public traker: Tracker) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public tracker: Tracker) {
 
   }
 
@@ -38,10 +38,13 @@ export class TransactionPage {
     prompt.present();
   }
 
+  public getTotal() {
+    return this.total;
+  }
+
   private add(amount: number) {
     this.transactions.push({amount: amount, date: new Date()});
     this.total += amount;
-    this.traker.setTotal(this.total);
   }
 
 }
