@@ -45,6 +45,7 @@ export class TransactionPage {
   private add(amount: number) {
     this.transactions.push({amount: amount, date: new Date()});
     this.total += amount;
+    this.tracker.setTotal(this.total);
   }
 
 }

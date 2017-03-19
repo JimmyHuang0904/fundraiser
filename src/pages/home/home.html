@@ -6,11 +6,10 @@
 
 <ion-content padding>
   <h2>View Your Progress!</h2>
-  <p>Controls:
-    <button (click)="add()" id="up">+</button>
-    <button (click)="subtract()" id="down">-</button>
-  </p>
-  <progress value={{currentTotal}} max="100"></progress>
+  <ion-card>
+    <h1 text-center padding>{{percentage}}% of Goal</h1>
+  </ion-card>
+  <progress value={{currentTotal}} max="100" color="secondary"></progress>
 
 
 </ion-content>
