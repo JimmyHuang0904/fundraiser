@@ -6,6 +6,7 @@ import { GoalPage } from '../pages/goal/goal';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import {Tracker} from './Tracker';
+import {AuthData} from './AuthData';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import {Tracker} from './Tracker';
     HomePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Tracker]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Tracker, AuthData]
 })
 export class AppModule {
 
