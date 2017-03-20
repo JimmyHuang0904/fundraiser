@@ -30,5 +30,4 @@ export class AuthData {
 	logoutUser(): firebase.Promise<any> {
   	return this.fireAuth.signOut();
 	}
-
 }

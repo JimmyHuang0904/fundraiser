@@ -5,6 +5,7 @@ import { TransactionPage } from '../pages/about/transactions';
 import { GoalPage } from '../pages/goal/goal';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
 import {Tracker} from './Tracker';
 import {AuthData} from './AuthData';
 
@@ -14,7 +15,8 @@ import {AuthData} from './AuthData';
     TransactionPage,
     GoalPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -25,7 +27,8 @@ import {AuthData} from './AuthData';
     TransactionPage,
     GoalPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Tracker, AuthData]
 })
